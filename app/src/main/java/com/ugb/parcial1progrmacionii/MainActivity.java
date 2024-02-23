@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
                     resultadoMensaje.setText("A Cancelar");
                     if (numAguaIngresada<18){
                         resultadoAgua.setText("$" + 6);
-                    } else if (numAguaIngresada>19 && numAguaIngresada<28){
+                    } else if (numAguaIngresada>=19 && numAguaIngresada<=28){
                         resultadoAgua.setText("$" + (6 + ((numAguaIngresada-18)*0.45)));
-                    } else if (numAguaIngresada>29){
-                        resultadoAgua.setText("$" + (6 + ((numAguaIngresada-18)*0.45)) + ((numAguaIngresada-28)*0.65)) ;
+                    } else if (numAguaIngresada>=29){
+                        resultadoAgua.setText("$" + (6 + (((numAguaIngresada-18)*0.45) + (numAguaIngresada-28)*0.65))) ;
                     }
                 }
             });
