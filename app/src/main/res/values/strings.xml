@@ -2,12 +2,13 @@
     <string name="app_name">Parcial 1 Progrmacion II</string>
 
     <string-array name="spnARea">
-        <item>Metro Cuadrado</item>
-        <item>Pie Cuadrado</item>
-        <item>Vara Cuadrada</item>
-        <item>Yarda Cuadrada</item>
+        <item>Varas Cuadradas</item>
+        <item>Metros Cuadrados</item>
+        <item>Pies Cuadrados</item>
+        <item>Manzanas</item>
+        <item>Acres</item>
+        <item>Hectáreas</item>
         <item>Tareas</item>
-        <item>Manzana</item>
         <item>Hectareas</item>
     </string-array>
 

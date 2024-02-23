@@ -37,11 +37,6 @@ public class MainActivity extends AppCompatActivity {
             tbh.addTab(tbh.newTabSpec( "CALCAGUA").setContent(R.id.tabCalculadoraAgua).setIndicator("Calculadora Agua", null));
             tbh.addTab(tbh.newTabSpec( "CONVERSOR").setContent(R.id.tabArea).setIndicator("Conversor Area", null));
 
-            txtAguaIngresada = findViewById(R.id.txtAguaConsumida);
-            numAguaIngresada = Double.parseDouble(txtAguaIngresada.getText().toString());
-
-            resultadoAgua = findViewById(R.id.lblRespuestaNum);
-            resultadoMensaje = findViewById(R.id.lblMensjae);
 
             btn1=findViewById(R.id.btnConvertirArea);
             btn1.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +60,13 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    resultadoMensaje.setText("A pagar");
+                    tempVal = findViewById(R.id.txtAguaConsumida);
+                    numAguaIngresada = Double.parseDouble(tempVal.getText().toString());
+
+                    resultadoAgua = findViewById(R.id.lblRespuestaNum);
+                    resultadoMensaje = findViewById(R.id.lblMensjae);
+
+                    resultadoMensaje.setText("A Cancelar");
                     if (numAguaIngresada<18){
                         resultadoAgua.setText("$" + 6);
                     } else if (numAguaIngresada>19 && numAguaIngresada<28){
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 }
 class conversores{
     double [][] valores ={
-            {1,10.763,1.43,1.19599,0.001590,0.0001434,0.0001}
+            {1,1.4308,0.1329,1000,5791.21,14310.25,899.772}
     };
     public double convertir (int opcion, int de, int a, double cantidad){
         return valores[opcion][de]*cantidad/valores[opcion][a];
